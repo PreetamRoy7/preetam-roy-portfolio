@@ -1,1 +1,125 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preetam Roy | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOADING SCREEN -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-text">Loading...</div>
+      <button id="sound-toggle" class="sound-toggle" aria-label="Toggle sound">🔈</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <h1 class="logo">Preetam Roy</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="fade-target">
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <div class="hero-text">
+      <img src="assets/images/profile-placeholder.png" alt="Preetam Roy — profile" class="profile-pic">
+      <h2>Hello, I'm <span>Preetam Roy</span></h2>
+      <p id="tagline" class="tagline" aria-live="polite"></p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="fade-target">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Full‑Stack & Game Developer who loves crafting engaging digital experiences.
+      I build responsive web apps, robust backends, and immersive games — always with clean, efficient code.
+      I enjoy learning new tools and turning creative ideas into polished, playable realities.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="fade-target">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">React</div>
+      <div class="skill-card">Unity (C#)</div>
+      <div class="skill-card">MySQL</div>
+      <div class="skill-card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="fade-target">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio showcasing skills, projects and contact info.</p>
+        <a href="#" class="link">Live / Repo</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Space Shooter Game</h3>
+        <p>A 2D space shooter in Unity with levels, power-ups and scoring system.</p>
+        <a href="#" class="link">Demo / Repo</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Task Manager App</h3>
+        <p>Full-stack task manager built with Node.js, Express and MongoDB.</p>
+        <a href="#" class="link">Live / Repo</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-target">
+    <h2>Contact Me</h2>
+
+    <!-- NOTE: Replace FORM_ENDPOINT with your Formspree endpoint (instructions in README) -->
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Contact form">
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+      <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <!-- Formspree autoresponse instructions rely on Formspree settings.
+           For immediate demo without Formspree account, you can use formsubmit.co endpoint:
+           action="https://formsubmit.co/preetamroy7@gmail.com" (see README) -->
+
+      <input type="hidden" name="_subject" value="New message from portfolio contact form">
+      <input type="hidden" name="_next" value="https://preetamroy7.github.io/preetam-roy-portfolio/thank-you.html">
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Preetam Roy. All rights reserved.</p>
+  </footer>
+
+  <!-- Audio (embedded) -->
+  <audio id="ambient-audio" loop preload="auto">
+    <source src="assets/music/ambient.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
